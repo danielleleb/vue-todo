@@ -14,11 +14,11 @@
                       <label>Project</label>
                       <input v-model="projectText" type="text" ref='project' defaultValue=''>
                   </div>
-                  <div class='ui two button attached buttons'>
-                      <button class='ui basic blue button' v-on:click="sendForm()">
+                  <div class='ui two attached buttons'>
+                      <button class='ui  positive basic button' v-on:click="sendForm()">
                           Create
                       </button>
-                      <button class='ui basic red button' v-on:click="closeForm()">
+                      <button class='ui  negative basic button' v-on:click="closeForm()">
                           Cancel
                       </button>
                   </div>
