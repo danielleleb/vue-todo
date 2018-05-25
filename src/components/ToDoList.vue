@@ -1,8 +1,14 @@
 <template>
     <div>
-        <p>Completed Tasks: {{todos.filter(todo => {return todo.done === true}).length}}</p>
-        <p>Pending Tasks: {{todos.filter(todo => {return todo.done === false}).length}}</p>
-
+        <div class="ui basic content center aligned segment">
+            <div class="ui basic green label">
+                <i class="check circle icon"></i> Completed Tasks: {{todos.filter(todo => {return todo.done ===true}).length}}
+            </div>
+            <div class="ui basic red label">
+                <i class="ellipsis horizontal icon"></i> Pending Tasks: {{todos.filter(todo => {return todo.done ===false}).length}}
+            </div>
+        </div>
+        
         <todo v-on:complete-todo="completeTodo" v-on:delete-todo="deleteTodo" v-for="todo in todos" :key="todo.id" v-bind:todo="todo"></todo>
         
     </div>
@@ -32,6 +38,9 @@ export default {
 
 
 <style>
+    .centered {
+        margin: auto;
+    }
 
 </style>
 
